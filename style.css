@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: 200px 1fr 150px;
+    gap: 10px;
+    padding: 20px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%);
+}
+
+#room {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    border: 2px solid #8b0000;
+    padding: 20px;
+    background-color: #2a0a0a;
+    border-radius: 8px;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#room h2 {
+    color: #ff4444;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+}
+
+#inventory {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    border: 2px solid #444;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+#inventory h3 {
+    color: #ffaa00;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item {
+    background-color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 3px solid #ffaa00;
+    font-size: 13px;
+}
+
+#output {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    border: 2px solid #444;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#buttons {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #8b0000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ff4444;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.6);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.success {
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.danger {
+    color: #ff4444;
+    text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+}
